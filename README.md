@@ -1,2 +1,2 @@
-# what-i-studied
-Writing what i studied
+# what-i-learned
+Writing what i learned
