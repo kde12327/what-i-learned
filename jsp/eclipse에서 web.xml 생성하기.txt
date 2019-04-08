@@ -1,0 +1,3 @@
+2019_04_08
+
+프로젝트 우클릭 후 Java EE Tools -> Generate Deployment Descriptor Stub
