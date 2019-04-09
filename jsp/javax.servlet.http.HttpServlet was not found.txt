@@ -8,3 +8,14 @@ jsp 첫 줄에 뜨는 에러.
 -> server runtime -> was 선택 -> finish
 
 출처 : https://multifrontgarden.tistory.com/52
+
+
+2019_04_09
+
+jre path를 잘못 잡아줘서 생기기도 하는거 같음.
+
+이번엔 servlet에서 javax.servlet.*에 빨간 밑줄이 생겨서 컴파일이 안됨.
+
+프로젝트 우클릭 -> build Path -> Configure build path -> java build path -> libraries -> add external jars -> 톰캣폴더\lib\jsp-api.jar, servlet-api.jar (두 개 다) 넣어주기
+
+출처 : https://blog.naver.com/skybrend/90174043355
