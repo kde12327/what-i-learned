@@ -1,0 +1,28 @@
+2019_04_18
+
+1) 그냥 List<Object> 로 보냈을 때
+컨트롤러에서 mapAndView 객체에
+mav.addObject("list", nodes);
+
+<c:forEach items="${list}" var="elements">
+	var node = new Object();
+	node.id = "${elements.id}";
+	node.x = "${elements.x}";
+	node.y = "${elements.y}";
+	node.z = "${elements.z}";
+	nodes.push(node);
+</c:forEach>
+
+
+하지만
+2) 컨트롤러에서 mapAndView 객체에
+mav.addObject("list", jsonArray.fromObject(nodes)); 요런식으로 넣으면
+
+var nodes = JSON.parse('${list}');
+
+console.log(nodes[0]);
+console.log(nodes[0].id);
+요렇게 가능
+
+1)의 경우 개발자 도구에서 source 부분을 보면 forEach 도는 만큼의 소스가 생성되서 보기 불편..
+2)의 경우 편안 ^^
